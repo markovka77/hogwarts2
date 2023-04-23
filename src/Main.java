@@ -37,6 +37,7 @@ public class Main {
 
         System.out.println("Всего студентов : " + students.length);
         System.out.println();
+
         PrintService.print(grifStud);
         System.out.println();
         PrintService.print(hufStud);
