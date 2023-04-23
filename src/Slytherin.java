@@ -33,4 +33,10 @@ public class Slytherin extends Hogwarts {
     public int getPower() {
         return this.power;
     }
+
+//    Slytherin draco = new Slytherin("Draco Malfoy", 11, 16, 76, 36, 97, 68, 88);
+//    Slytherin graham = new Slytherin("Graham Montague", 9, 14, 27, 45, 98, 56, 74);
+//    Slytherin georgy = new Slytherin("Gregory Goyle", 6, 9, 53, 64, 85, 67, 72);
+
+
 }

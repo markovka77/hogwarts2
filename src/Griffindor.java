@@ -34,26 +34,13 @@ public class Griffindor extends Hogwarts {
         this.courage = courage;
     }
 
-    public static void BestStudentGriffindor(Griffindor[] grifStud, String st, String st1) {
-        Griffindor[] var5 = grifStud;
-        int var6 = grifStud.length;
-
-        for(int var7 = 0; var7 < var6; ++var7) {
-            Griffindor i = var5[var7];
-            Griffindor[] var9 = grifStud;
-            int var10 = grifStud.length;
-
-            for(int var11 = 0; var11 < var10; ++var11) {
-                Griffindor j = var9[var11];
-                int sum = i.getCourage() + i.getNobility() + i.getMagic() + i.getHonor() + i.getTransgretion();
-                int sum1 = j.getCourage() + j.getHonor() + j.getNobility() + j.getMagic() + j.getTransgretion();
-                if (sum1 > sum) {
-                    System.out.println(i.getFullName());
-                } else {
-                    System.out.println(i.getFullName());
-                }
-            }
-        }
+    public void calculate(Griffindor[] griffindor){
 
     }
+
+//    Griffindor harry = new Griffindor("Garry Potter",10, 15, 43, 80, 70);
+//    Griffindor hermione = new Griffindor("Hermione Granger", 8, 10, 69, 75, 86);
+//    Griffindor ron = new Griffindor("Ron Weasley", 7, 12, 42, 78, 40);
+
+
 }

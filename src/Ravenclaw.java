@@ -27,4 +27,9 @@ public class Ravenclaw extends Hogwarts {
     public int getCreation() {
         return this.creation;
     }
+
+//    Ravenclaw cho = new Ravenclaw("Cho Chang", 17, 19, 46, 78, 34, 56);
+//    Ravenclaw padma = new Ravenclaw("Padma Patil", 13, 11, 78, 49, 50, 58);
+//    Ravenclaw marcus = new Ravenclaw("Marcus Belby", 12, 17, 79, 37, 96, 60);
 }
+
