@@ -28,8 +28,30 @@ public class Ravenclaw extends Hogwarts {
         return this.creation;
     }
 
-//    Ravenclaw cho = new Ravenclaw("Cho Chang", 17, 19, 46, 78, 34, 56);
-//    Ravenclaw padma = new Ravenclaw("Padma Patil", 13, 11, 78, 49, 50, 58);
-//    Ravenclaw marcus = new Ravenclaw("Marcus Belby", 12, 17, 79, 37, 96, 60);
+    @Override
+    public String toString() {
+        return "Ravenclaw{" +
+                super.toString() +
+                "smart=" + smart +
+                ", wisdom=" + wisdom +
+                ", wit=" + wit +
+                ", creation=" + creation +
+                '}';
+    }
+
+    public void bestStudent(Ravenclaw student) {
+        int skillSum = this.smart + this.wisdom + this.wit + this.creation;
+        int skillSumStudent = student.smart + student.wisdom + student.wit + student.creation;
+        if (skillSum > skillSumStudent) {
+            System.out.println(this.getFullName() + " лучше чем " + student.getFullName());
+        }
+        if (skillSum < skillSumStudent) {
+            System.out.println(student.getFullName() + " лучше чем " + this.getFullName());
+        }
+        if (skillSum == skillSumStudent) {
+            System.out.println("Студенты одинаково хороши.");
+        }
+    }
+
 }
 

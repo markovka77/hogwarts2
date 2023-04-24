@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Griffindor extends Hogwarts {
     private int nobility;
     private int honor;
@@ -34,13 +36,33 @@ public class Griffindor extends Hogwarts {
         this.courage = courage;
     }
 
-    public void calculate(Griffindor[] griffindor){
+    public void calculate(Griffindor[] griffindor) {
 
     }
 
-//    Griffindor harry = new Griffindor("Garry Potter",10, 15, 43, 80, 70);
-//    Griffindor hermione = new Griffindor("Hermione Granger", 8, 10, 69, 75, 86);
-//    Griffindor ron = new Griffindor("Ron Weasley", 7, 12, 42, 78, 40);
+    @Override
+    public String toString() {
+        return "Griffindor{" +
+                super.toString() +
+                "nobility=" + nobility +
+                ", honor=" + honor +
+                ", courage=" + courage +
+                '}';
+    }
 
-
+    public void bestStudent(Griffindor student) {
+        int skillSum = this.nobility + this.honor + this.courage;
+        int skillSumStudent = student.courage + student.honor + student.nobility;
+        if (skillSum > skillSumStudent) {
+            System.out.println(this.getFullName() + " лучше чем " + student.getFullName());
+        }
+        if (skillSum < skillSumStudent) {
+            System.out.println(student.getFullName() + " лучше чем " + this.getFullName());
+        }
+        if (skillSum == skillSumStudent)
+            System.out.println("Студенты одинаково хороши.");
+    }
 }
+
+
+

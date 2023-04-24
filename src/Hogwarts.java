@@ -1,5 +1,5 @@
-public class Hogwarts {
-    final String fullName;
+public abstract class Hogwarts {
+    private final String fullName;
     private int magic;
     private int transgretion;
 
@@ -28,5 +28,29 @@ public class Hogwarts {
     public void setTransgretion(int transgretion) {
         this.transgretion = transgretion;
     }
+
+    @Override
+    public String toString() {
+        return "Hogwarts{" +
+                "fullName='" + fullName + '\'' +
+                ", magic=" + magic +
+                ", transgretion=" + transgretion +
+                '}';
+    }
+
+    public void bestStudent(Hogwarts student) {
+        int skillSum = this.magic + this.transgretion;
+        int skillSumStudent = student.magic + student.transgretion;
+        if (skillSum > skillSumStudent) {
+            System.out.println(this.getFullName() + " лучше чем " + student.getFullName());
+        }
+        if (skillSum < skillSumStudent) {
+            System.out.println(student.getFullName() + " лучше чем " + this.getFullName());
+        }
+        if (skillSum == skillSumStudent) {
+            System.out.println("Студенты одинаково хороши.");
+        }
+    }
+
 }
 

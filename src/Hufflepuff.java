@@ -21,8 +21,29 @@ public class Hufflepuff extends Hogwarts {
     public int getHonesty() {
         return this.honesty;
     }
-//    Hufflepuff zacharias = new Hufflepuff("Zacharias Smith", 15, 20, 83, 56, 34);
-//    Hufflepuff cedric = new Hufflepuff("Cedric Diggory", 14, 18, 67, 98, 74);
-//    Hufflepuff justin = new Hufflepuff("Justin Finch-Fletchley", 12, 13, 69, 33, 82);
+
+    @Override
+    public String toString() {
+        return "Hufflepuff{" +
+                super.toString() +
+                "industriousness=" + industriousness +
+                ", loyalty=" + loyalty +
+                ", honesty=" + honesty +
+                '}';
+    }
+
+    public void bestStudent(Hufflepuff student) {
+        int skillSum = this.industriousness + this.loyalty + this.honesty;
+        int skillSumStudent = student.industriousness + student.loyalty + student.honesty;
+        if (skillSum > skillSumStudent) {
+            System.out.println(this.getFullName() + " лучше чем " + student.getFullName());
+        }
+        if (skillSum < skillSumStudent) {
+            System.out.println(student.getFullName() + " лучше чем " + this.getFullName());
+        }
+        if (skillSum == skillSumStudent) {
+            System.out.println("Студенты одинаково хороши.");
+        }
+    }
 
 }

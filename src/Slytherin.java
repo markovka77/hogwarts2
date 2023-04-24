@@ -34,9 +34,31 @@ public class Slytherin extends Hogwarts {
         return this.power;
     }
 
-//    Slytherin draco = new Slytherin("Draco Malfoy", 11, 16, 76, 36, 97, 68, 88);
-//    Slytherin graham = new Slytherin("Graham Montague", 9, 14, 27, 45, 98, 56, 74);
-//    Slytherin georgy = new Slytherin("Gregory Goyle", 6, 9, 53, 64, 85, 67, 72);
+    @Override
+    public String toString() {
+        return "Slytherin{" +
+                super.toString() +
+                "cunning=" + cunning +
+                ", determination=" + determination +
+                ", ambition=" + ambition +
+                ", resourcefulness=" + resourcefulness +
+                ", power=" + power +
+                '}';
+    }
+
+    public void bestStudent(Slytherin student) {
+        int skillSum = this.cunning + this.determination + this.ambition + this.resourcefulness + this.power;
+        int skillSumStudent = student.cunning + student.determination + student.ambition + student.resourcefulness + student.power;
+        if (skillSum > skillSumStudent) {
+            System.out.println(this.getFullName() + " лучше чем " + student.getFullName());
+        }
+        if (skillSum < skillSumStudent) {
+            System.out.println(student.getFullName() + " лучше чем " + this.getFullName());
+        }
+        if (skillSum == skillSumStudent) {
+            System.out.println("Студенты одинаково хороши.");
+        }
+    }
 
 
 }
